@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">福利社</string>
+
+    <string name="action_about">关于</string>
+
+    <string-array name="navi_titles">
+        <item>首页</item>
+        <item>美腿</item>
+        <item>美臀</item>
+        <item>大胸</item>
+        <item>尺度</item>
+        <!--<item>设置</item>-->
+    </string-array>
+    <string name="viewpager_indicator">%1$d/%2$d</string>
+    <string name="drawer_open">open</string>
+    <string name="drawer_close">close</string>
+</resources>

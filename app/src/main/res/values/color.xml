@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="main_color">#5677fc</color>
+    <color name="main_color_50">#e7e9fd</color>
+    <color name="main_color_100">#d0d9ff</color>
+    <color name="main_color_200">#afbfff</color>
+    <color name="main_color_300">#91a7ff</color>
+    <color name="main_color_400">#738ffe</color>
+    <color name="main_color_600">#5677fc</color>
+    <color name="main_color_700">#4e6cef</color>
+    <color name="main_color_800">#455ede</color>
+    <color name="main_color_900">#3b50ce</color>
+    <color name="main_color_A100">#2a36b1</color>
+    <color name="main_color_A200">#a6baff</color>
+    <color name="main_color_A400">#4d73ff</color>
+    <color name="main_color_A700">#4d69ff</color>
+
+    <color name="floating_color">#fdd835</color>
+
+    <color name="transparent">#00000000</color>
+
+
+    <color name="btn_click_pressed">#e0f7fa</color>
+    <color name="btn_click_unpressed">#fff</color>
+</resources>
