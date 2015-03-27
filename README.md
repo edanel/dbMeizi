@@ -11,6 +11,10 @@
 ![index](https://raw.githubusercontent.com/edanel/FuLiShe/master/Images/Second.png)
 ![index](https://raw.githubusercontent.com/edanel/FuLiShe/master/Images/Third.png)
 
+###下载
+***
+** [福利社 For Android](https://raw.githubusercontent.com/edanel/FuLiShe/master/app/app-release.apk)**
+
 ##开源库
 ***
 * **[universal-image-loader](https://github.com/nostra13/Android-Universal-Image-Loader)**
