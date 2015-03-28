@@ -15,9 +15,9 @@
 * **[PhotoView](https://github.com/chrisbanes/PhotoView)**
 
 ##下载
-[福利社 For Android](https://raw.githubusercontent.com/edanel/FuLiShe/master/app/app-release.apk)
+[福利社 For Android](https://raw.githubusercontent.com/edanel/FuLiShe/master/app/app-release.apk)  **(该版本为最原始版)**
 
 ##说明
 * 编译环境 Mac OS X 10.9.5 
 * 编译工具 Android Studio 1.1.0 
-* 熟悉下Material的新特性，练手作品，小撸怡情 :）
+* 熟悉下Material的新特性，练手作品，不定时更新，小撸怡情 :）
