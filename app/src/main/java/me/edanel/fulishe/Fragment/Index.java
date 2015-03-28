@@ -23,7 +23,7 @@ import me.edanel.fulishe.R;
 /**
  * Created by Eggplant on 15-3-26.
  */
-public class Index extends Fragment implements Init{
+public class Index extends Fragment implements Init {
     private View view;
 
     private RecyclerView recyclerView;
@@ -44,8 +44,8 @@ public class Index extends Fragment implements Init{
             super.handleMessage(msg);
             switch (msg.what) {
                 case 1:
-                    if (mImagesAdapter == null){
-                        mImagesAdapter = new ImagesAdapter(getActivity(),CateAllBean.getInstance().getImgs());
+                    if (mImagesAdapter == null) {
+                        mImagesAdapter = new ImagesAdapter(getActivity(), CateAllBean.getInstance().getImgs());
                         recyclerView.setAdapter(mImagesAdapter);
                     }
                     mImagesAdapter.setImages(CateAllBean.getInstance().getImgs());
@@ -61,6 +61,7 @@ public class Index extends Fragment implements Init{
             }
         }
     };
+
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_index, container, false);
@@ -89,9 +90,9 @@ public class Index extends Fragment implements Init{
 
 //        recyclerView.setHasFixedSize(true);//??
 
-        staggeredGridLayoutManager = new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL);
+        staggeredGridLayoutManager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(staggeredGridLayoutManager);
-
+//        recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
             public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
@@ -108,10 +109,10 @@ public class Index extends Fragment implements Init{
 //                Log.i("edanel","visibleItemCount --> " + visibleItemCount);
 //                Log.i("edanel","totalItemCount --> " + totalItemCount);
 //                Log.i("edanel","pastVisibleItems --> " + pastVisibleItems);
-                if(loading){
-                    if ((visibleItemCount + pastVisibleItems) >= totalItemCount){
+                if (loading) {
+                    if ((visibleItemCount + pastVisibleItems) >= totalItemCount) {
                         loading = false;
-                        mPages = "?maxid="+mImagesAdapter.getmList().get(totalItemCount-1).getId();
+                        mPages = "?maxid=" + mImagesAdapter.getmList().get(totalItemCount - 1).getId();
                         Handler handler = new Handler();
                         handler.postDelayed(new Runnable() {
                             @Override

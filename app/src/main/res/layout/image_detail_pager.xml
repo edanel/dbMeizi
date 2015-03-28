@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent">
 
     <me.edanel.fulishe.Utils.HackyViewPager
         android:id="@+id/pager"
@@ -18,6 +18,23 @@
         android:textSize="18sp"
         android:textColor="@android:color/white"
         android:text="@string/viewpager_indicator"
+        android:visibility="gone"
         android:background="@android:color/transparent" />
 
+    <TextView
+        android:id="@+id/photoview_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="保存"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:clickable="true"
+        android:paddingTop="10dp"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:background="#11ffffff"
+        android:layout_margin="20dp"
+        android:layout_gravity="bottom|right" />
 </FrameLayout>

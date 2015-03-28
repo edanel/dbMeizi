@@ -69,11 +69,23 @@ public class ImagesAdapter extends RecyclerView.Adapter<ImagesAdapter.ViewHolder
                         ImagePagerActivity.class);
                 Log.i("edanel", "pic add --> " + Url.HOST_PIC + mList.get(i).getPath());
                 intent.putExtra(ImagePagerActivity.EXTRA_IMAGE_URLS,
-                        new String[]{Url.HOST_PIC + mList.get(i).getPath()});
+                        getBigImageArray());
                 intent.putExtra(ImagePagerActivity.EXTRA_IMAGE_INDEX, 0);
                 mContext.startActivity(intent);
             }
         });
+    }
+
+    /**
+     * 取大图地址数组
+     * @return
+     */
+    private String [] getBigImageArray(){
+        String [] ImagesArray = new String[mList.size()];
+        for (int i = 0; i < mList.size(); i++) {
+            ImagesArray[i] =  Url.HOST_PIC +mList.get(i).getPath();
+        }
+        return ImagesArray;
     }
 
     @Override

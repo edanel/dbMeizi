@@ -6,7 +6,9 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
+import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import me.edanel.fulishe.R;
 
@@ -18,7 +20,7 @@ public class ImagePagerActivity extends FragmentActivity {
 
 	private HackyViewPager mPager;
 	private int pagerPosition;
-	private TextView indicator;
+	private TextView indicator,mSave;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -30,7 +32,15 @@ public class ImagePagerActivity extends FragmentActivity {
 
 
 		mPager = (HackyViewPager) findViewById(R.id.pager);
-		ImagePagerAdapter mAdapter = new ImagePagerAdapter(
+        mSave = (TextView) findViewById(R.id.photoview_save);
+        mSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(ImagePagerActivity.this,"图片保存成功",Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        ImagePagerAdapter mAdapter = new ImagePagerAdapter(
 				getSupportFragmentManager(), urls);
 		mPager.setAdapter(mAdapter);
 		indicator = (TextView) findViewById(R.id.indicator);
