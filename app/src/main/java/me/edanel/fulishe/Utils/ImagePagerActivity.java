@@ -27,7 +27,7 @@ public class ImagePagerActivity extends FragmentActivity {
     public static final String EXTRA_IMAGE_URLS = "image_urls";
 
     private HackyViewPager mPager;
-    private int pagerPosition,mNowPosition;
+    private int pagerPosition, mNowPosition;
     private TextView indicator, mSave;
 
     @Override
@@ -44,10 +44,10 @@ public class ImagePagerActivity extends FragmentActivity {
         mSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (ImageLoader.getInstance().getDiskCache().get(urls[mNowPosition]).getAbsolutePath() != null){
-                    saveImageToGallery(ImagePagerActivity.this,ImageLoader.getInstance().getDiskCache().get(urls[mNowPosition]).getAbsolutePath());
+                if (ImageLoader.getInstance().getDiskCache().get(urls[mNowPosition]).getAbsolutePath().length() != 0) {
+                    saveImageToGallery(ImagePagerActivity.this, ImageLoader.getInstance().getDiskCache().get(urls[mNowPosition]).getAbsolutePath());
                     Toast.makeText(ImagePagerActivity.this, "图片保存成功", Toast.LENGTH_SHORT).show();
-                }else{
+                } else {
                     Toast.makeText(ImagePagerActivity.this, "图片缓存读取失败", Toast.LENGTH_SHORT).show();
                 }
 
@@ -78,7 +78,7 @@ public class ImagePagerActivity extends FragmentActivity {
                 CharSequence text = getString(R.string.viewpager_indicator,
                         arg0 + 1, mPager.getAdapter().getCount());
                 indicator.setText(text);
-                mNowPosition = arg0 ;
+                mNowPosition = arg0;
             }
 
         });
