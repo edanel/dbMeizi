@@ -70,7 +70,7 @@ public class ImagesAdapter extends RecyclerView.Adapter<ImagesAdapter.ViewHolder
                 Log.i("edanel", "pic add --> " + Url.HOST_PIC + mList.get(i).getPath());
                 intent.putExtra(ImagePagerActivity.EXTRA_IMAGE_URLS,
                         getBigImageArray());
-                intent.putExtra(ImagePagerActivity.EXTRA_IMAGE_INDEX, 0);
+                intent.putExtra(ImagePagerActivity.EXTRA_IMAGE_INDEX, i);
                 mContext.startActivity(intent);
             }
         });
