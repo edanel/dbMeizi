@@ -27,7 +27,7 @@ public class ImagePagerActivity extends FragmentActivity {
     public static final String EXTRA_IMAGE_URLS = "image_urls";
 
     private HackyViewPager mPager;
-    private int pagerPosition;
+    private int pagerPosition,mNowPosition;
     private TextView indicator, mSave;
 
     @Override
@@ -44,7 +44,7 @@ public class ImagePagerActivity extends FragmentActivity {
         mSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                saveImageToGallery(ImagePagerActivity.this,ImageLoader.getInstance().getDiskCache().get(urls[pagerPosition]).getAbsolutePath());
+                saveImageToGallery(ImagePagerActivity.this,ImageLoader.getInstance().getDiskCache().get(urls[mNowPosition]).getAbsolutePath());
                 Toast.makeText(ImagePagerActivity.this, "图片保存成功", Toast.LENGTH_SHORT).show();
             }
         });
@@ -73,6 +73,7 @@ public class ImagePagerActivity extends FragmentActivity {
                 CharSequence text = getString(R.string.viewpager_indicator,
                         arg0 + 1, mPager.getAdapter().getCount());
                 indicator.setText(text);
+                mNowPosition = arg0 ;
             }
 
         });
