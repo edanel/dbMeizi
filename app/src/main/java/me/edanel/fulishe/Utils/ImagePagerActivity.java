@@ -44,8 +44,13 @@ public class ImagePagerActivity extends FragmentActivity {
         mSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                saveImageToGallery(ImagePagerActivity.this,ImageLoader.getInstance().getDiskCache().get(urls[mNowPosition]).getAbsolutePath());
-                Toast.makeText(ImagePagerActivity.this, "图片保存成功", Toast.LENGTH_SHORT).show();
+                if (ImageLoader.getInstance().getDiskCache().get(urls[mNowPosition]).getAbsolutePath() != null){
+                    saveImageToGallery(ImagePagerActivity.this,ImageLoader.getInstance().getDiskCache().get(urls[mNowPosition]).getAbsolutePath());
+                    Toast.makeText(ImagePagerActivity.this, "图片保存成功", Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(ImagePagerActivity.this, "图片缓存读取失败", Toast.LENGTH_SHORT).show();
+                }
+
             }
         });
 
